@@ -1,9 +1,3 @@
-// Drawer + Router
-// 주의: 
-// index.js에 BrowserRoute잊지말자
-// drawer >List >ListItme>ListItemText>ListItemIcon
-
-
 import React, {useState} from 'react';
 import {Route,Link} from "react-router-dom";
 
@@ -13,12 +7,12 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 
-import HomeIcon from '@material-ui/icons/Home';
-import WebIcon from '@material-ui/icons/Web';
+import Inputs from './Inputs';
+
 
 const styles = theme => ({
     alignContent: {
@@ -34,14 +28,18 @@ function DrawerItemNavigation({classes}) {
       <Grid item className= {classes.alignContent}>
         <Route 
           exact
-          path="/"
-          render={() => <Typography>아!</Typography>}
+          path="/Inputs"
+          render={() =>   
+          <div>
+            <Inputs />
+          </div>
+          }
         />
-        <Route 
-          exact
-          path="/page2"
-          render={() => <Typography>page2</Typography>}
-        />
+        
+
+
+
+
         <Route 
           exact
           path="/page3"
@@ -50,7 +48,6 @@ function DrawerItemNavigation({classes}) {
       </Grid>
       <Grid item>
           <Drawer
-          
             className={classes.drawerWidth}
             open = {open}
             onClose={() => setOpen(false)}
@@ -58,42 +55,27 @@ function DrawerItemNavigation({classes}) {
             <List>
               <ListItem
               component={Link}
-              to="/"
+              to="/Inputs"
               onClick={()=> setOpen(false)}
               >
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText>홈'</ListItemText>
+                <ListItemText>Inputs</ListItemText>
               </ListItem>
-              <ListItem
-                component={Link}
-                to = "/page2"
-                onClick={()=>setOpen(false)}
-              >
-                <ListItemIcon>
-                  <WebIcon />
-                </ListItemIcon>
-                <ListItemText>Page 2</ListItemText>
-              </ListItem>
+              
               <ListItem
                 component={Link}
                 to = "/page3"
                 onClick={()=>setOpen(false)}
               >
-                <ListItemIcon>
-                  <WebIcon />
-                </ListItemIcon>
                 <ListItemText>Page 3</ListItemText>
               </ListItem>
             </List>
             </Drawer>
       </Grid>
-      {/* <Grid item>
+      <Grid item>
         <Button onClick = {()=> setOpen(!open)}>
-          {open ? 'Hide' : 'Show'} Drawer
+          {open ? 'Hide' : 'Show'} 
         </Button>
-      </Grid> */}
+      </Grid>
     </Grid>
   );
 }

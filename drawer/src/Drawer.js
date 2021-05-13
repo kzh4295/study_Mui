@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
+// import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 
 export default function DrawerTypes ({classes, variant}){
@@ -41,11 +41,11 @@ return (
             </List>
           </Drawer>
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <Button onClick = {() => setOpen(!open)}>
           {open ? 'Hide' : 'Show'} Drawer
         </Button>
-      </Grid>
+      </Grid> */}
     </Grid>
   )
 }
