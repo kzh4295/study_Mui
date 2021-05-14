@@ -12,7 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 
 import Inputs from './Inputs';
-
+import Navigation from './Navigation';
 
 const styles = theme => ({
     alignContent: {
@@ -32,6 +32,16 @@ function DrawerItemNavigation({classes}) {
           render={() =>   
           <div>
             <Inputs />
+          </div>
+          }
+        />
+        <Route 
+          exact
+          path="/Navigation"
+          render={() =>   
+          <div>
+            <Navigation />
+            
           </div>
           }
         />
@@ -60,7 +70,14 @@ function DrawerItemNavigation({classes}) {
               >
                 <ListItemText>Inputs</ListItemText>
               </ListItem>
-              
+              <ListItem
+              component={Link}
+              to="/Navigation"
+              onClick={()=> setOpen(false)}
+              >
+                <ListItemText>Navigation</ListItemText>
+              </ListItem>
+
               <ListItem
                 component={Link}
                 to = "/page3"
