@@ -116,7 +116,7 @@ export default function TransferList() {
                   inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`List item ${value + 1}`} />
+              <ListItemText id={labelId} primary={`수건 ${value + 1}`} />
             </ListItem>
           );
         })}
@@ -127,7 +127,7 @@ export default function TransferList() {
 
   return (
     <Grid container spacing={2} justify="center" alignItems="center" className={classes.root}>
-      <Grid item>{customList('추가', left)}</Grid>
+      <Grid item>{customList('옵션', left)}</Grid>
       <Grid item>
         <Grid container direction="column" alignItems="center">
           <Button

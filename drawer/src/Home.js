@@ -11,8 +11,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 
-import Inputs from './Inputs';
-import Navigation from './Navigation';
+import Inputs from './Inputs/Inputs';
+import Navigation from './Navigation/Navigation';
 
 const styles = theme => ({
     alignContent: {

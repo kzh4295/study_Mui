@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button,ButtonGroup,Checkbox,FormGroup,FormControl,Fab,Radio,RadioGroup,FormControlLabel,FormLabel,Typography,Slider,valuetext,Switch,TextField} 
+import {Button,ButtonGroup,Checkbox,FormGroup,FormControl,Fab,Radio,RadioGroup,FormControlLabel,FormLabel,Switch,TextField} 
 from "@material-ui/core"
 import AddIcon from '@material-ui/icons/Add';
 import DateAndTimePickers from './date';
