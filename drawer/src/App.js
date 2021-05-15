@@ -5,6 +5,10 @@ import React, {useState} from 'react';
 import DrawerItemNavigation from './Home';
 // import DrawerItemNavigation from './MixTest';
 
+import styled, {ThemeProvider} from 'styled-components';
+
+
+
 
 
 function App() {

@@ -13,6 +13,11 @@ import Typography from '@material-ui/core/Typography';
 
 import Inputs from './Inputs/Inputs';
 import Navigation from './Navigation/Navigation';
+import Surfaces from './Surfaces/Surfaces'
+import Feedback from './Feedback/Feedback';
+
+
+
 
 const styles = theme => ({
     alignContent: {
@@ -41,20 +46,30 @@ function DrawerItemNavigation({classes}) {
           render={() =>   
           <div>
             <Navigation />
-            
           </div>
           }
         />
-        
+        <Route 
+          exact
+          path="/Surfaces"
+          render={() => <div><Surfaces/></div>}
+        />
+        <Route 
+          exact
+          path="/Feedback"
+          render={() => <div><Feedback/></div>}
+        />
 
 
 
 
         <Route 
           exact
-          path="/page3"
-          render={() => <Typography>page3</Typography>}
+          path="/여기"
+          render={() => <div>여기</div>}
         />
+
+
       </Grid>
       <Grid item>
           <Drawer
@@ -77,20 +92,41 @@ function DrawerItemNavigation({classes}) {
               >
                 <ListItemText>Navigation</ListItemText>
               </ListItem>
+              <ListItem
+                component={Link}
+                to = "/Surfaces"
+                onClick={()=>setOpen(false)}
+              >
+                <ListItemText>Surfaces</ListItemText>
+              </ListItem>
+              <ListItem
+                component={Link}
+                to = "/Feedback"
+                onClick={()=>setOpen(false)}
+              >
+                <ListItemText>Feedback</ListItemText>
+              </ListItem>
+
+
+
+
+
+
+
 
               <ListItem
                 component={Link}
-                to = "/page3"
+                to = "/여기"
                 onClick={()=>setOpen(false)}
               >
-                <ListItemText>Page 3</ListItemText>
+                <ListItemText>여기</ListItemText>
               </ListItem>
             </List>
             </Drawer>
       </Grid>
       <Grid item>
         <Button onClick = {()=> setOpen(!open)}>
-          {open ? 'Hide' : 'Show'} 
+          {open ? '목록닫기' : '목록 보기'} 
         </Button>
       </Grid>
     </Grid>
